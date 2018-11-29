@@ -3,5 +3,18 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Rahul Khanna",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-astro": "^1.0.8",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0",
+    "sinon": "^7.1.1",
+    "sinon-chai": "^3.3.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "random-words": "^1.1.0",
+    "winston": "^3.1.0"
+  }
 }
