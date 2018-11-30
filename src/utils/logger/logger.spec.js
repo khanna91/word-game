@@ -1,34 +1,28 @@
-const { describe, it } = require('mocha');
-const sinon = require('sinon');
-const MockRequest = require('mock-express-request');
-const { logger } = require('./logger');
+const util = require('./logger.util');
 
-const sandbox = sinon.createSandbox();
-
-const request = new MockRequest({
-  method: 'PUT',
-  url: '/api/status'
-});
-
-describe('Utils - logger', () => {
-  const req = request;
+describe('Utility - logger', () => {
+  let infoSpy;
+  let errorSpy;
+  const req = 'hello logger';
 
   beforeEach(() => {
+    infoSpy = jest.spyOn(util.logger, 'info');
+    errorSpy = jest.spyOn(util.logger, 'error');
   });
 
-  afterEach(() => sandbox.restore());
+  afterEach(() => {
+    jest.restoreAllMocks();
+  });
 
-  it('should write info log stream', () => {
-    const infoStub = sandbox.stub(logger, 'info');
-    logger.stream.write(req);
+  test('should write info log stream', () => {
+    util.logger.info(req);
 
-    sinon.assert.calledOnce(infoStub);
+    expect(infoSpy).toHaveBeenCalledTimes(1);
   });
 
   it('should write error log stream', () => {
-    const errorStub = sandbox.stub(logger, 'error');
-    logger.streamError.write(req);
+    util.logger.error(req);
 
-    sinon.assert.calledOnce(errorStub);
+    expect(errorSpy).toHaveBeenCalledTimes(1);
   });
 });

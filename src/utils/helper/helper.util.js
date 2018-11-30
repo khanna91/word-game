@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 const fs = require('fs');
 const logger = require('../logger');
 
@@ -17,6 +18,9 @@ exports.printArray = (array = []) => {
  * @param {String} data                 Array content which needs to store
  */
 exports.saveArrayToFile = (fileName, data) => {
+  if (!fileName || fileName === '') {
+    throw new Error('INVALID_FILE_NAME');
+  }
   const file = fs.createWriteStream(`${fileName}.task.txt`);
   file.on('error', (err) => {
     logger.error(err);
