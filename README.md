@@ -11,8 +11,8 @@ Word Game
 Clone the repo and make it yours:
 
 ```bash
-git clone --depth 1 https://github.com/danielfsousa/express-rest-es2017-boilerplate
-cd word-game
+git clone https://github.com/khanna91/word-game <my-project-name>
+cd <my-project-name>
 ```
 
 Install dependencies:
