@@ -11,7 +11,7 @@ Word Game
 Clone the repo and make it yours:
 
 ```bash
-git clone https://github.com/khanna91/word-game <my-project-name>
+git clone https://github.com/khanna91/word-game.git <my-project-name>
 cd <my-project-name>
 ```
 
@@ -45,5 +45,5 @@ yarn test:unit
 
 ## License
 
-[MIT License](README.md) - [Rahul Khanna]
+[MIT License](LICENSE) - [Rahul Khanna]
 
