@@ -3,7 +3,7 @@ Word Game
 
 ## Requirements
 
- - [Node v8+](https://nodejs.org/en/download/current/) or [Docker](https://www.docker.com/)
+ - [Node v8+](https://nodejs.org/en/download/current/)
  - [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Get started
@@ -41,6 +41,7 @@ yarn test
 
 # run unit tests with coverage
 yarn test:unit
+```
 
 ## License
 
