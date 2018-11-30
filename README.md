@@ -3,7 +3,7 @@ Word Game
 
 ## Requirements
 
- - [Node v8+](https://nodejs.org/en/download/current/)
+ - [Node v10+](https://nodejs.org/en/download/current/)
  - [Yarn](https://yarnpkg.com/en/docs/install)
 
 ## Get started
